@@ -1,0 +1,1 @@
+/home/ashaposhnikov/qa-tools/svnlog.py

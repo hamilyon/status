@@ -1,0 +1,5 @@
+#!/bin/sh
+killall metacity 
+sofea_9204.sh &
+as_9240.sh &
+nohup xmonad &

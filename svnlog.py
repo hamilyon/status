@@ -1,0 +1,1 @@
+../qa-tools/smart-svnlog/trunk/src/svnlog.py

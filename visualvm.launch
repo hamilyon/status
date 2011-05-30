@@ -1,0 +1,6 @@
+#! /bin/bash
+# You could use Xnest instead of Xephyr here
+Xephyr :2 -ac -screen 1024x768 &
+export DISPLAY=:2
+icewm --display :2 &
+/usr/lib/jvm/java-6-sun-1.6.0.24/bin/jvisualvm &
