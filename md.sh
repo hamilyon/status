@@ -1,1 +1,1 @@
-nice -n 16 mvn-hh package eclipse:eclipse -DdownloadSources=true -ff
+nice -n 16 mvn-hh clean install eclipse:eclipse -DdownloadSources=true -ff
