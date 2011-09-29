@@ -12,11 +12,23 @@ while [ $tries -lt 253 ]; do
   fi
   sleep 3
 done
+while [ $tries -lt 50 ]; do
+  curl "localhost:8080/status"
+  if [ "${?}" = "0" ]; then
+    break
+  fi
+  sleep 3
+done
 curl "localhost:8998/status"
 if [ "${?}" = "0" ]; then
-    notify-send -i /home/ashaposhnikov/re/bleeding_edge/webapp-static/target/webapp-static/11let/css/hh/blocks/anniversary/logo.png 'Dev env is up' 'hh-as + sofea'
+    curl "localhost:8080/status"
+    if [ "${?}" = "0" ]; then
+      notify-send -i /home/ashaposhnikov/re/bleeding_edge/webapp-static/target/webapp-static/11let/css/hh/blocks/anniversary/logo.png 'Dev env is up' 'hh-as + sofea'
+    else
+      notify-send 'Dev env failed to run'
+    fi
 else
-    notify-send 'Dev env failed to run'
+  notify-send 'Dev env failed to run'
 fi
 
 
