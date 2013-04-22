@@ -1,5 +1,5 @@
-grep -l maven.pomderived  .classpath 2>&1 1>/dev/null
-if [ "$?" = "0" ]; then
+grep -l maven.pomderived  .classpath */.classpath 2>&1 1>/dev/null
+if [ "$?" = "0" -o "$?" = "2" ]; then
     echo "To avoid possible coflict with m2eclipse skipping maven eclipse plugin target. Delete .classpath files manually to do full rebuild"
     nice -n 16  mvn-hh clean install -DdownloadSources=true -ff -T8
 else
