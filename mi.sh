@@ -3,7 +3,7 @@ if [ "$?" = "0" -o "$?" = "2" ]; then
     echo "To avoid possible coflict with m2eclipse skipping maven eclipse plugin target. Delete .classpath files manually to do full rebuild"
     nice -n 16  mvn-hh clean install -ff -T8
 else
-    nice -n 16  mvn-hh clean install org.apache.maven.plugins:maven-eclipse-plugin:2.9:eclipse -ff -T8
+    nice -n 16  mvn-hh clean install org.apache.maven.plugins:maven-eclipse-plugin:2.9:eclipse -ff -T8 -U
 fi
 
 if [ "$?" = "0" ]; then 
