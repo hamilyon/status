@@ -1,1 +1,1 @@
-killall metacity & nohup xmonad &
+nohup xmonad --replace &
