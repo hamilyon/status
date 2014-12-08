@@ -9,6 +9,7 @@ while [ $tries -lt 20 ]; do
     break
   fi
   sleep 2
+  tries=$((tries+1))
 done
 curl "localhost:8080/status"
 if [ "${?}" = "0" ]; then
