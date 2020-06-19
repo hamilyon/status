@@ -4,6 +4,6 @@
 #EXT-X-TARGETDURATION:10
 #EXT-X-PROGRAM-DATE-TIME:2020-06-19T11:20:05+03:00
 #EXTINF:10.008,
-http://httpstat.us/504?sleep=5000
+http://httpstat.us/504?sleep=20000
 #EXTINF:10.007,
 http://httpstat.us/504?sleep=3000
